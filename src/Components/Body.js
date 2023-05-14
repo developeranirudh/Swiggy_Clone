@@ -1,16 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import data from "../../Resturant data.json";
+import data from "../../ResturantData.json";
 import ResturantCard from "./Resturant.js";
-const Body = () => {
-    return (
-      <div className="res-container">
-       { 
-         data.map((resturant) => (<ResturantCard key={resturant.data.id} resData = {resturant}/> ))
-       }
-      </div>
-    );
-  };
+import { useState } from "react";
 
-  export default Body
-  
+const Body = () => {
+  const [ResturantList, setResturantList] = useState(data);
+
+  return (
+    <div className="res-container">
+      <button
+        onClick={() => {
+          const filterlist = data.filter((res) => data.avgRating > 4);
+          setResturantList(filterlist);
+        }}
+      />
+      {ResturantList.data.map((resturant) => (
+        <ResturantCard key={resturant.data.id} resData={resturant} />
+      ))}
+    </div>
+  );
+};
+
+export default Body;
