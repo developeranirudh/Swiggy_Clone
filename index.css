@@ -1,3 +1,37 @@
-#root{
-    color: blue;
+.header {
+  display: flex;
+  border: black 1px solid;
+  height: 100px;
+  justify-content: space-between;
+}
+.nav-items > ul {
+  display: flex;
+  font-size: 24px;
+}
+.nav-items > ul > li {
+  list-style-type: none;
+  font-family: "Times New Roman", Times, serif;
+  padding: 15px 20px;
+}
+.logo {
+  height: 110px;
+  width: 110px;
+}
+.rescard {
+  width: 250px;
+  height: 350px;
+  margin: 20px 20px;
+  border: black 2px solid;
+}
+.res-container {
+  /* border:black 2px solid; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 60px 80px;
+  height: 800px;
+}
+.res-logo {
+  width: 250px;
+  height: 150px;
 }
