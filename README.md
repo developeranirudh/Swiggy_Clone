@@ -76,10 +76,6 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 Please ensure your code follows the existing coding style and includes appropriate tests if applicable.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the code as per your needs.
-
 ## Acknowledgments
 
 This project was inspired by the Swiggy application and aims to provide a simplified version of its functionality for learning purposes.
