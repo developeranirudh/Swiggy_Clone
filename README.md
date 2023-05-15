@@ -33,7 +33,7 @@ This is a Swiggy clone built using React, designed to replicate the basic functi
    npm start
    ```
 
-5. Open the application in your browser at `http://localhost:3000`.
+5. Open the application in your browser at `http://localhost:1234`.
 
 ## Project Structure
 
