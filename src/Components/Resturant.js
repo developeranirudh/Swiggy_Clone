@@ -9,7 +9,6 @@ const ResturantCard = (props) => {
             props.resData.data.cloudinaryImageId
           }
         ></img>
-        {console.log(props)}
         <h3>{name}</h3>
         <h4>{cuisines.join(",  ")}</h4>
         <h5>{`Cost For Two: ` + costForTwo / 100}</h5>

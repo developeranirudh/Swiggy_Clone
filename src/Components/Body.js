@@ -8,17 +8,22 @@ const Body = () => {
   const [ResturantList, setResturantList] = useState(data);
 
   return (
-    <div className="res-container">
+    <>
       <button
         onClick={() => {
-          const filterlist = data.filter((res) => data.avgRating > 4);
+          const filterlist = data.filter((res) => res.data.avgRating >= 4);
+          console.log(parseInt(filterlist[0].data.avgRating))
           setResturantList(filterlist);
         }}
-      />
-      {ResturantList.data.map((resturant) => (
-        <ResturantCard key={resturant.data.id} resData={resturant} />
-      ))}
-    </div>
+      >
+        Top Rated Resturant
+      </button>
+      <div className="res-container">
+        {ResturantList.map((resturant) => (
+          <ResturantCard key={resturant.data.id} resData={resturant} />
+        ))}
+      </div>
+    </>
   );
 };
 
