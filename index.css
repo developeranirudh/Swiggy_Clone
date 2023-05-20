@@ -1,28 +1,68 @@
+body{
+  background-color:#FFFFFF;
+}
 .header {
   display: flex;
-  border: black 1px solid;
+  /* border: black 1px solid; */
   height: 100px;
   justify-content: space-between;
 }
-.nav-items > ul {
+
+.nav-items>ul {
   display: flex;
   font-size: 24px;
 }
-.nav-items > ul > li {
+
+.nav-items>ul>li {
   list-style-type: none;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Segoe UI';
   padding: 15px 20px;
 }
+
 .logo {
-  height: 110px;
-  width: 110px;
+  height: 100px;
+  width: 250px;
 }
+
 .rescard {
   width: 250px;
   height: 350px;
   margin: 20px 20px;
-  border: black 2px solid;
+  border: rgb(176, 174, 174) 0.5px solid;
+  border-radius: 20px
 }
+
+.restitle{
+  font-family:'Segoe UI';
+  font-size: 18px;
+  padding-left: 5px;
+}
+.rescuisines{
+  font-family:'Segoe UI';
+  font-size: 10px;
+  padding-left: 5px;
+}
+.resinfo{
+  font-family:'Segoe UI';
+  font-size: 10px;
+  padding-left: 5px;
+}
+.resdeliverytime{
+  font-family:'Segoe UI';
+  font-size: 12px;
+  padding-left: 5px;
+}
+.resdelivery-image{
+  height: 15px;
+  /* border: 2px solid black; */
+  padding: 20px;
+}
+.resdelivery-container{
+  display: flex;
+  justify-content:flex-start;
+  /* border: 2px solid black; */
+}
+
 .res-container {
   /* border:black 2px solid; */
   display: flex;
@@ -30,8 +70,29 @@
   justify-content: space-around;
   padding: 60px 80px;
   height: 800px;
+
 }
+
 .res-logo {
   width: 250px;
   height: 150px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.buttons {
+  display: flex;
+  /* border: 2px black solid; */
+  padding: 40px 20px;
+}
+
+.TopRatedResturant {
+  border: none;
+  cursor: pointer;
+  font-family: 'Gotham';
+  background: none;
+}
+
+.badge_image {
+  height: 50px;
+  width: 50px;
 }

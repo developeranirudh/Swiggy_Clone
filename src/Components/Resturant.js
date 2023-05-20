@@ -1,3 +1,4 @@
+import delivery from "../../public/images/delivery.png"
 const ResturantCard = (props) => {
     const {name,cuisines,costForTwo,minDeliveryTime}=props.resData.data
     return (
@@ -9,10 +10,10 @@ const ResturantCard = (props) => {
             props.resData.data.cloudinaryImageId
           }
         ></img>
-        <h3>{name}</h3>
-        <h4>{cuisines.join(",  ")}</h4>
-        <h5>{`Cost For Two: ` + costForTwo / 100}</h5>
-        <h5>{minDeliveryTime}</h5>
+        <h3 className="restitle">{name}</h3>
+        <h4 className="rescuisines">{cuisines.join(",  ")}</h4>
+        <h5 className="resinfo" >{`Cost For Two: ` + costForTwo / 100} &#8377;</h5>
+        <div className="resdelivery-container"> <h5  className="resdeliverytime">{`Delivery Time: `+minDeliveryTime+` MINS`}</h5><img className="resdelivery-image" src={delivery} alt="image" /></div>
       </div>
     );
   };
