@@ -30,52 +30,50 @@ const Body = () => {
     getswiggydata();
   }, []);
 
-
-  if(ResturantList.length == 0)
-  {
-    return <div> Loading....</div>
-  }
-  else {
-  return (
-    <>
-      <div className="buttons">
-        <div className="search">
-          <input
-            type="text"
-            className="search-input"
-            placeholder="Search"
-            onChange={(e) => {
-              setSearchText(e.target.value);
-            }}
-          ></input>
+  // Conditional Rendering
+  if (ResturantList.length == 0) {
+    return <div> Loading....</div>;
+  } else {
+    return (
+      <>
+        <div className="buttons">
+          <div className="search">
+            <input
+              type="text"
+              className="search-input"
+              placeholder="Search"
+              onChange={(e) => {
+                setSearchText(e.target.value);
+              }}
+            ></input>
+            <button
+              className="search-btn"
+              onClick={() => {
+                const searchdata = filterdata(SearchText, ResturantList);
+                setResturantList(searchdata);
+              }}
+            >
+              Search
+            </button>
+          </div>
           <button
-            className="search-btn"
+            className="TopRatedResturant"
             onClick={() => {
-              const searchdata = filterdata(SearchText, ResturantList);
-              setResturantList(searchdata);
+              const filterlist = data.filter((res) => res.data.avgRating >= 4);
+              console.log(parseInt(filterlist[0].data.avgRating));
+              setResturantList(filterlist);
             }}
           >
-            Search
+            <img className="badge_image" src={badge_image} alt="image" />
           </button>
         </div>
-        <button
-          className="TopRatedResturant"
-          onClick={() => {
-            const filterlist = data.filter((res) => res.data.avgRating >= 4);
-            console.log(parseInt(filterlist[0].data.avgRating));
-            setResturantList(filterlist);
-          }}
-        >
-          <img className="badge_image" src={badge_image} alt="image" />
-        </button>
-      </div>
-      <div className="res-container">
-        {ResturantList.map((resturant) => (
-          <ResturantCard key={resturant.data.id} resData={resturant} />
-        ))}
-      </div>
-    </>
-  );
+        <div className="res-container">
+          {ResturantList.map((resturant) => (
+            <ResturantCard key={resturant.data.id} resData={resturant} />
+          ))}
+        </div>
+      </>
+    );
+  }
 };
-}
 export default Body;

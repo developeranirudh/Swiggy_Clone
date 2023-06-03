@@ -118,3 +118,15 @@ body{
   cursor: pointer;
 
 }
+
+.AuthSate{
+  height: 40px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: #FC8019;
+  font-family: 'Gotham';
+  color: #FFFFFF;
+  border:none;
+  cursor: pointer;
+  margin-top: 10px;
+}
