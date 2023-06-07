@@ -6,7 +6,7 @@ import badge_image from "../../public/images/badge.png";
 const Body = () => {
   function filterdata(searchText, resturant) {
     const searchdata = resturant.filter((resturant) => {
-      if (resturant.data.name.includes(searchText)) {
+      if (resturant.data.name.toLowerCase().includes(searchText)) {
         return resturant.data;
       }
     });
@@ -15,6 +15,7 @@ const Body = () => {
 
   const [ResturantList, setResturantList] = useState([]);
   const [SearchText, setSearchText] = useState(" ");
+  const [FilterResturant, SetFilterResturant] = useState(ResturantList);
 
   getswiggydata = async () => {
     const data = await fetch(
@@ -22,7 +23,7 @@ const Body = () => {
     );
     const jsondata = await data.json();
     setResturantList(jsondata?.data?.cards[2]?.data?.data?.cards);
-    console.log(jsondata);
+    SetFilterResturant(jsondata?.data?.cards[2]?.data?.data?.cards);
     return;
   };
 
@@ -43,32 +44,34 @@ const Body = () => {
               className="search-input"
               placeholder="Search"
               onChange={(e) => {
-                setSearchText(e.target.value);
+                setSearchText(e.target.value.toLowerCase());
               }}
             ></input>
             <button
               className="search-btn"
+              title="Search"
               onClick={() => {
                 const searchdata = filterdata(SearchText, ResturantList);
-                setResturantList(searchdata);
+                SetFilterResturant(searchdata);
               }}
             >
               Search
             </button>
           </div>
           <button
+            title="Top Rated Resturant In Town 🌟"
             className="TopRatedResturant"
             onClick={() => {
-              const filterlist = data.filter((res) => res.data.avgRating >= 4);
+              const filterlist = FilterResturant.filter((res) => res.data.avgRating >= 4.5);
               console.log(parseInt(filterlist[0].data.avgRating));
-              setResturantList(filterlist);
+              SetFilterResturant(filterlist);
             }}
           >
             <img className="badge_image" src={badge_image} alt="image" />
           </button>
         </div>
         <div className="res-container">
-          {ResturantList.map((resturant) => (
+          {FilterResturant.map((resturant) => (
             <ResturantCard key={resturant.data.id} resData={resturant} />
           ))}
         </div>

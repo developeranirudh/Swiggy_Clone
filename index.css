@@ -82,7 +82,7 @@ body{
 .buttons {
   display: flex;
   /* border: 2px black solid; */
-  justify-content: space-between;
+  /* justify-content: space-evenly; */
   padding: 40px 20px;
 }
 
@@ -91,6 +91,7 @@ body{
   cursor: pointer;
   font-family: 'Gotham';
   background: none;
+  padding-left: 60px;
 }
 
 .badge_image {
