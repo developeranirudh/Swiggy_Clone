@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import ResturantCard from "./Resturant.js";
 import { useState } from "react";
 import badge_image from "../../public/images/badge.png";
+import { Link } from "react-router-dom";
 const Body = () => {
   function filterdata(searchText, resturant) {
     const searchdata = resturant.filter((resturant) => {
@@ -15,9 +16,9 @@ const Body = () => {
 
   const [ResturantList, setResturantList] = useState([]);
   const [SearchText, setSearchText] = useState(" ");
-  const [FilterResturant, SetFilterResturant] = useState(ResturantList);
+  const [FilterResturant, SetFilterResturant] = useState("");
 
-  getswiggydata = async () => {
+  const getswiggydata = async () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0972121&lng=72.9135629&page_type=DESKTOP_WEB_LISTING"
     );
@@ -32,7 +33,7 @@ const Body = () => {
   }, []);
 
   // Conditional Rendering
-  if (ResturantList.length == 0) {
+  if (ResturantList == 0) {
     return <div> Loading....</div>;
   } else {
     return (
@@ -63,7 +64,6 @@ const Body = () => {
             className="TopRatedResturant"
             onClick={() => {
               const filterlist = FilterResturant.filter((res) => res.data.avgRating >= 4.5);
-              console.log(parseInt(filterlist[0].data.avgRating));
               SetFilterResturant(filterlist);
             }}
           >
@@ -72,7 +72,7 @@ const Body = () => {
         </div>
         <div className="res-container">
           {FilterResturant.map((resturant) => (
-            <ResturantCard key={resturant.data.id} resData={resturant} />
+         <Link to={"/resturants/"+ resturant.data.id}> <ResturantCard key={resturant.data.id} resData={resturant} /></Link>
           ))}
         </div>
       </>
