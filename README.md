@@ -1,4 +1,4 @@
-# Swiggy 2.0 - A Swiggy Clone Web App 🍔🚀
+# Swiggy - A Swiggy Clone Web App 🍔🚀
 
 Swiggy 2.0 is a personal project that replicates the popular food delivery application Swiggy. This web app is built using React, Parcel as the bundler, Tailwind CSS for styling, Redux Toolkit for state management, and Jest for testing. It incorporates various advanced React concepts and features to provide an interactive and user-friendly experience.
 
