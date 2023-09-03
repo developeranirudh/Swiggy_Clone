@@ -1,22 +1,18 @@
-import React from "react";
+import React from 'react'
+import User from './User'
+import UserClass from './UserClass'
 
-class About extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state={
-      count:2,
-      count2:1
+const About = () => {
+  return (
+    <div className='about-page'>
+        <h1>About Us</h1>
+        <h2>This is a sample about page 😊  </h2>
 
-    }
-  }
-  render() {
-    return (
-      <div>
-        <h1>{this.props.name}</h1>
-        <h1>{this.state.count}</h1>
-      </div>
-    );
-  }
+        {/* <User name="Chahat <function>" city="Jaipur" /> */}
+        <UserClass name="Chahat <class>" city="Jaipur" />
+    </div>
+  )
 }
 
-export default About;
+
+export default About

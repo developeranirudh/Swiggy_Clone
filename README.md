@@ -1,81 +1,61 @@
-# React Swiggy Clone
+# Swiggy 2.0 - A Swiggy Clone Web App 🍔🚀
 
-This is a Swiggy clone built using React, designed to replicate the basic functionality and user experience of the popular food delivery platform Swiggy. This application allows users to browse restaurants, view menus, add items to cart, place orders, and track the delivery status.
+Swiggy 2.0 is a personal project that replicates the popular food delivery application Swiggy. This web app is built using React, Parcel as the bundler, Tailwind CSS for styling, Redux Toolkit for state management, and Jest for testing. It incorporates various advanced React concepts and features to provide an interactive and user-friendly experience.
 
-## Features
+<img src="https://upload.wikimedia.org/wikipedia/en/1/12/Swiggy_logo.svg" alt="Swiggy Image" width="600">
 
-- **Restaurant Listings**: Users can browse through a list of available restaurants, view their details, and see the available menus.
-- **Menu and Item Details**: Users can view the menu of a particular restaurant, see the details of each item, including the name, description, price, and an optional image.
-- **Cart Management**: Users can add items to their cart, modify the quantity, and remove items as needed.
-- **Order Placement**: Users can place an order by providing their delivery address and contact information.
-- **Order Tracking**: Users can track the status of their order, including the preparation and delivery stages.
-- **User Authentication**: Users can sign up and log in to the application to access personalized features such as order history.
 
-## Installation
+## Features 🌟
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/your-username/react-swiggy-clone.git
-   ```
+- **User Location Detection:** The app utilizes GPS to fetch the user's location and displays nearby restaurants based on their current location.
 
-2. Change into the project directory:
-   ```
-   cd react-swiggy-clone
-   ```
+- **Restaurant Sorting:** Users can sort the displayed restaurants based on delivery time, price (low to high or high to low), ratings, or the default order.
 
-3. Install the dependencies:
-   ```
-   npm install
-   ```
+- **Restaurant Details:** Users can explore individual restaurants and view the list of dishes available in each restaurant.
 
-4. Start the development server:
-   ```
-   npm start
-   ```
+- **Cart Management:** Users can add items to their cart while browsing restaurants. They can navigate to the cart page to review the summary of their order.
 
-5. Open the application in your browser at `http://localhost:1234`.
+- **Dynamic Location Change:** The app enables users to change their location dynamically using a search API to find restaurants in different areas.
 
-## Project Structure
+## Technologies Used 🛠️
 
-The project structure is organized as follows:
+- **React:** The project is built using React, a popular JavaScript library for building user interfaces.
 
-- `src/` - Contains the main source code files.
-  - `components/` - Reusable React components used throughout the application.
-  - `pages/` - React components that represent different pages of the application.
-  - `services/` - Backend API services for interacting with the server.
-  - `styles/` - CSS or SASS stylesheets for styling the components.
-  - `utils/` - Utility functions and helpers.
-- `public/` - Contains static assets and the `index.html` file.
-- `package.json` - Defines the project dependencies and scripts.
+- **Parcel:** Parcel is used as the bundler, simplifying the setup and build process of the application.
 
-## Dependencies
+- **Tailwind CSS:** Tailwind CSS is employed for styling the app, allowing for efficient and customizable styling using utility classes.
 
-The main dependencies used in this project are:
+- **Redux Toolkit:** Redux Toolkit is used for state management, providing a standardized way to manage and update the application's state.
 
-- React
-- React Router
-- Axios (for making API requests)
-- Bootstrap (for styling)
-- Font Awesome (for icons)
+- **Jest:** Jest is the chosen testing library for unit testing components and ensuring their functionality.
 
-These dependencies are automatically installed when running `npm install`.
+## Advanced React Concepts 🚀
 
-## Configuration
+- **Custom Hooks:** The app utilizes custom hooks to encapsulate and reuse logic, improving code organization and reusability.
 
-To configure the application, you may need to modify certain settings such as the API endpoints, authentication details, or database connection information. Look for configuration files or constants in the project where these values are stored and make the necessary changes.
+- **Context API:** The Context API is employed to manage and share state across components without excessive prop drilling.
 
-## Contributing
+- **React Portals:** React portals are used to render modals and overlays, providing a better user experience for certain interactions.
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+## Project Setup ⚙️
 
-1. Fork the repository.
-2. Create a new branch for your feature/bug fix.
-3. Make your changes and commit them with descriptive commit messages.
-4. Push your changes to your forked repository.
-5. Submit a pull request to the original repository.
+To set up and run the project locally:
 
-Please ensure your code follows the existing coding style and includes appropriate tests if applicable.
+1. Clone the repository: `git clone https://github.com/chahatbhatia1/swiggy-clone.git`
+2. Navigate to the project directory: `cd swiggy-clone`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start` or `npm run start`
 
-## Acknowledgments
+## Testing 🧪
 
-This project was inspired by the Swiggy application and aims to provide a simplified version of its functionality for learning purposes.
+The project includes a suite of tests written using Jest to ensure the reliability and correctness of the components.
+
+To run the tests:
+
+```bash
+npm run test
+```
+
+# Conclusion  🎉
+
+Swiggy 2.0 is a feature-rich web app that mimics the Swiggy food delivery platform. It is built using cutting-edge technologies and incorporates advanced React concepts to provide a seamless and interactive user experience. The app's user location detection, restaurant sorting, and cart management features make it a user-friendly and practical application for users to explore and order from various restaurants.

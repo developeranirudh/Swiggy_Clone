@@ -1,133 +1,16 @@
-body{
-  background-color:#FFFFFF;
-}
-.header {
-  display: flex;
-  /* border: black 1px solid; */
-  height: 100px;
-  justify-content: space-between;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.nav-items>ul {
-  display: flex;
-  font-size: 24px;
-}
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
 
-.nav-items>ul>li {
-  list-style-type: none;
-  font-family: 'Segoe UI';
-  padding: 15px 20px;
-}
-
-.logo {
-  height: 100px;
-  width: 250px;
-}
-
-.rescard {
-  width: 250px;
-  height: 350px;
-  margin: 20px 20px;
-  border: rgb(176, 174, 174) 0.5px solid;
-  border-radius: 20px
-}
-
-.restitle{
-  font-family:'Segoe UI';
-  font-size: 18px;
-  padding-left: 5px;
-}
-.rescuisines{
-  font-family:'Segoe UI';
-  font-size: 10px;
-  padding-left: 5px;
-}
-.resinfo{
-  font-family:'Segoe UI';
-  font-size: 10px;
-  padding-left: 5px;
-}
-.resdeliverytime{
-  font-family:'Segoe UI';
-  font-size: 12px;
-  padding-left: 5px;
-}
-.resdelivery-image{
-  height: 15px;
-  /* border: 2px solid black; */
-  padding: 20px;
-}
-.resdelivery-container{
-  display: flex;
-  justify-content:flex-start;
-  /* border: 2px solid black; */
-}
-
-.res-container {
-  /* border:black 2px solid; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 60px 80px;
-  height: 800px;
-
-}
-
-.res-logo {
-  width: 250px;
-  height: 150px;
-  border-radius: 20px 20px 0px 0px;
-}
-
-.buttons {
-  display: flex;
-  /* border: 2px black solid; */
-  /* justify-content: space-evenly; */
-  padding: 40px 20px;
-}
-
-.TopRatedResturant {
-  border: none;
-  cursor: pointer;
-  font-family: 'Gotham';
-  background: none;
-  padding-left: 60px;
-}
-
-.badge_image {
-  height: 50px;
-  width: 50px;
-}
-.search-input{
-  width: 200px;
-  margin: 40px;
-  height: 30px;
-  font-family: 'Segoe UI';
-  border-radius: 20px;
-  border: none;
-  height: 30px;
-  width: 200px;
-}
-.search-btn{
-  border-radius: 20px;
-  height: 30px;
-  width: 60px;
-  background-color: #FC8019;
-  font-family: 'Segoe UI';
-  border: none;
-  color:white;
-  cursor: pointer;
-
-}
-
-.AuthSate{
-  height: 40px;
-  width: 80px;
-  border-radius: 20px;
-  background-color: #FC8019;
-  font-family: 'Gotham';
-  color: #FFFFFF;
-  border:none;
-  cursor: pointer;
-  margin-top: 10px;
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
 }
